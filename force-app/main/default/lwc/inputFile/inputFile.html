@@ -1,0 +1,17 @@
+<template>
+    <template if:true={documents}>
+        <template for:each={documents} for:item="document">
+            <li key={document.Id}>
+                {document.Id}
+            </li>
+        </template>
+    </template>
+
+    <div>Inicio</div>
+    <div>
+        <button class="slds-button slds-button_brand" onclick={click}>Add file</button>
+        <lightning-input type="file" title="add file" data-id="file" onchange={change} multiple></lightning-input>
+    </div>
+    <div>Fim</div>
+
+</template>
